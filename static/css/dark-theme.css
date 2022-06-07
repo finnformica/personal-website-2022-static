@@ -1,0 +1,164 @@
+body {
+  background-color: #101010;
+  border-style: solid;
+  border-width: 0.4rem 0;
+  border-color: #2E18E1;
+}
+
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: "Ubuntu", sans-serif;
+}
+
+li, p {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+
+/* Navbar */
+
+nav .navbar .navbar-expand {
+  padding-left: 10%;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav li a {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.navbar-nav a:hover {
+  color: #D0D0D0;
+}
+
+/* underline animation */
+.navbar-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0.2em;
+
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transform: scale(0, 0);
+  transform-origin: center;
+  background-color: #18CBE1;
+}
+
+.navbar-nav a:hover::after, .navbar-nav a:focus::after {
+  transform: scale(1, 1);
+}
+
+/* Headings */
+
+.big-heading {
+  font-weight: 700;
+  font-size: 2.6rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.small-heading {
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 1.2rem 0;
+}
+
+/* Sections */
+
+#hobbies, #education {
+  text-align: left;
+}
+
+#intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+  padding: 0 5%;
+}
+
+/* Footer */
+
+#footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+#footer p {
+  font-size: 1rem;
+}
+
+.footer-icon {
+  margin: 20px 10px;
+}
+
+.footer-icon:hover {
+  color: #18CBE1;
+}
+
+
+/* Classes */
+
+.underline {
+  text-decoration: underline;
+}
+
+.solid-line {
+  border-style: solid;
+  border-width: 0 0 0.2rem;
+  border-color: #D0D0D0;
+}
+
+.logo-dark-mode {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1866E1 !important;
+  padding: 1rem 0 1rem 1rem;
+
+  transition: 300ms linear;
+  display: inline-block;
+}
+
+.logo-dark-mode:hover {
+  color: #18CBE1;
+  color: red;
+}
+
+.dark-mode {
+  color: #D0D0D0;
+}
+
+.blue {
+  color: #1866E1;
+  font-weight: 700;
+  transition: 300ms linear;
+  display: inline-block;
+}
+
+.blue:hover {
+  color: #18CBE1;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Media queries */
+
+@media (max-width: 575px) {
+  .navbar-nav a::after {
+    left: calc(50% - 40px);
+    width: 80px;
+  }
+}

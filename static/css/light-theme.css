@@ -1,0 +1,25 @@
+@import "dark-theme.css";
+
+body {
+  background-color: white;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: white;
+}
+
+.navbar-nav a:hover {
+  color: grey;
+}
+
+/* Classes */
+
+.solid-line {
+  border-color: black;
+}
+
+.dark-mode {
+  color: black;
+}
