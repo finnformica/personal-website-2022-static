@@ -2,7 +2,8 @@ body {
   background-color: #101010;
   border-style: solid;
   border-width: 0.4rem 0;
-  border-color: #2E18E1;
+  border-bottom-color: #2E18E1;
+  border-top-color: white;
 }
 
 
@@ -14,6 +15,10 @@ li, p {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   font-size: 1.2rem;
+}
+
+p {
+  padding: 0.7rem 0;
 }
 
 
@@ -81,10 +86,6 @@ nav .navbar .navbar-expand {
   text-align: left;
 }
 
-#intro, #hobbies, #education, #projects, #experience, #contact, #footer {
-  padding: 0 5%;
-}
-
 /* Footer */
 
 #footer {
@@ -121,7 +122,7 @@ nav .navbar .navbar-expand {
   font-size: 2.5rem;
   font-weight: 700;
   color: #1866E1 !important;
-  padding: 1rem 0 1rem 1rem;
+  padding: 0.8rem 0 0.8rem 1rem;
 
   transition: 300ms linear;
   display: inline-block;
@@ -160,5 +161,33 @@ nav .navbar .navbar-expand {
   .navbar-nav a::after {
     left: calc(50% - 40px);
     width: 80px;
+  }
+}
+
+/* center headings on small screens */
+@media (max-width: 576px) {
+  .big-heading, .small-heading {
+    text-align: center;
+  }
+}
+
+/* Small screen */
+@media (min-width: 0) {
+  #intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+    padding: 1rem 5%;
+  }
+}
+
+/* Medium screen */
+@media (min-width: 768px) {
+  #intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+    padding: 1rem 15%;
+  }
+}
+
+/* Large screen */
+@media (min-width: 992px) {
+  #intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+    padding: 1rem 20%;
   }
 }
