@@ -23,6 +23,16 @@ p {
   padding: 0.7rem 0;
 }
 
+hr {
+  background-color: none;
+  border-style: dotted none none;
+  border-color: grey;
+  border-width: 8px;
+  height: 0px;
+  width: 5%;
+  margin: 25px auto;
+}
+
 
 /* Navbar */
 
@@ -72,20 +82,30 @@ nav .navbar .navbar-expand {
 
 .big-heading {
   font-weight: 700;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   padding: 2rem 0 2rem 0;
 }
 
 .small-heading {
   font-weight: 500;
   font-size: 2rem;
-  padding: 1.2rem 0;
+  padding: 2rem 0;
 }
 
 /* Sections */
 
-#hobbies, #education {
+/* #hobbies, #education {
   text-align: left;
+} */
+
+#intro, #education, #projects-heading, #projects, #experience, #contact, #footer {
+  padding: 1rem 0;
+}
+
+/* Hobbies */
+
+#hobbies {
+  padding: 0 2rem 0 0;
 }
 
 /* Footer */
@@ -107,6 +127,17 @@ nav .navbar .navbar-expand {
   color: #18CBE1;
 }
 
+/* Education */
+
+.education-card {
+  padding: 1.5rem 0;
+}
+
+/* Work experience */
+
+.experience-card {
+  padding: 1.5rem 0;
+}
 
 /* Classes */
 
@@ -121,10 +152,10 @@ nav .navbar .navbar-expand {
 }
 
 .logo-dark-mode {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #1866E1 !important;
-  padding: 0.8rem 0 0.8rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
 
   transition: 300ms linear;
   display: inline-block;
@@ -176,20 +207,23 @@ nav .navbar .navbar-expand {
 /* Small screen */
 @media (min-width: 0) {
   #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
-    padding: 1rem 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 /* Medium screen */
 @media (min-width: 768px) {
   #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
-    padding: 1rem 15%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
 /* Large screen */
 @media (min-width: 992px) {
   #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
-    padding: 1rem 20%;
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }
