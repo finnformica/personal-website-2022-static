@@ -175,21 +175,21 @@ nav .navbar .navbar-expand {
 
 /* Small screen */
 @media (min-width: 0) {
-  #intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+  #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
     padding: 1rem 5%;
   }
 }
 
 /* Medium screen */
 @media (min-width: 768px) {
-  #intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+  #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
     padding: 1rem 15%;
   }
 }
 
 /* Large screen */
 @media (min-width: 992px) {
-  #intro, #hobbies, #education, #projects, #experience, #contact, #footer {
+  #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
     padding: 1rem 20%;
   }
 }
