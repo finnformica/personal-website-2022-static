@@ -1,4 +1,5 @@
 @import "toggle.css";
+@import "project-card.css";
 
 body {
   background-color: #101010;
@@ -8,15 +9,28 @@ body {
   border-top-color: white;
 }
 
-
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, a, button {
   font-family: "Ubuntu", sans-serif;
 }
 
-li, p {
+li, p, label {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.angle-bracket:before {
+  content: "\003E";
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+section {
+  scroll-margin-top: 140px;
 }
 
 p {
@@ -25,23 +39,28 @@ p {
 
 hr {
   background-color: none;
-  border-style: dotted none none;
+  border-style: solid none none;
   border-color: grey;
-  border-width: 8px;
-  height: 0px;
-  width: 5%;
-  margin: 25px auto;
+  border-width: 4px;
+  width: 6%;
+  margin: 120px auto;
 }
 
 
-/* Navbar */
+figcaption {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
 
+/* Navbar */
 nav .navbar .navbar-expand {
   padding-left: 10%;
 }
 
 .navbar {
   background-color: black;
+  margin-bottom: 1.8rem;
 }
 
 .navbar-collapse {
@@ -53,8 +72,21 @@ nav .navbar .navbar-expand {
   position: relative;
 }
 
-.navbar-nav a:hover {
+.navbar-nav:hover {
   color: #D0D0D0;
+}
+
+.navbar-brand {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1866E1 !important;
+  padding: 0.5rem 0 0.5rem 1rem;
+  transition: 300ms linear;
+  display: inline-block;
+}
+
+.navbar-brand:hover {
+  color: #18CBE1 !important;
 }
 
 /* underline animation */
@@ -63,10 +95,8 @@ nav .navbar .navbar-expand {
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 100%;
   height: 0.2em;
-
   opacity: 1;
   transition: opacity 300ms, transform 300ms;
   transform: scale(0, 0);
@@ -79,11 +109,10 @@ nav .navbar .navbar-expand {
 }
 
 /* Headings */
-
 .big-heading {
   font-weight: 700;
   font-size: 2.4rem;
-  padding: 2rem 0 2rem 0;
+  padding: 0 0 0 0;
 }
 
 .small-heading {
@@ -92,27 +121,25 @@ nav .navbar .navbar-expand {
   padding: 2rem 0;
 }
 
-/* Sections */
-
-/* #hobbies, #education {
-  text-align: left;
-} */
-
-#intro, #education, #projects-heading, #projects, #experience, #contact, #footer {
-  padding: 1rem 0;
+.smaller-heading {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 2rem 0;
 }
 
-/* Hobbies */
-
-#hobbies {
-  padding: 0 2rem 0 0;
+/* Bitcoin Risk */
+#bitcoinChart {
+  background-color: white;
 }
 
 /* Footer */
-
 #footer {
   text-align: center;
   margin-top: auto;
+  padding: 1.5rem 0;
+  border-style: solid;
+  border-width: 0.1rem 0 0 0;
+  border-color: white;
 }
 
 #footer p {
@@ -127,19 +154,35 @@ nav .navbar .navbar-expand {
   color: #18CBE1;
 }
 
-/* Education */
+/* Contact */
 
-.education-card {
-  padding: 1.5rem 0;
+#contact {
+  padding-bottom: 80px;
 }
 
-/* Work experience */
-
-.experience-card {
+/* Education */
+.education-card {
   padding: 1.5rem 0;
+  scroll-margin-top: 120px;
 }
 
 /* Classes */
+
+.form-control {
+  margin: 0;
+  padding: auto 0;
+  width: 40%;
+}
+
+.font {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+}
+
+.background {
+  border-image: url("/static/patternpad.svg") 50 round;
+  border-width: 0 4rem;
+}
 
 .underline {
   text-decoration: underline;
@@ -148,22 +191,7 @@ nav .navbar .navbar-expand {
 .solid-line {
   border-style: solid;
   border-width: 0 0 0.2rem;
-  border-color: #D0D0D0;
-}
-
-.logo-dark-mode {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1866E1 !important;
-  padding: 0.5rem 0 0.5rem 1rem;
-
-  transition: 300ms linear;
-  display: inline-block;
-}
-
-.logo-dark-mode:hover {
-  color: #18CBE1;
-  color: red;
+  border-color: white;
 }
 
 .dark-mode {
@@ -175,6 +203,7 @@ nav .navbar .navbar-expand {
   font-weight: 700;
   transition: 300ms linear;
   display: inline-block;
+  font-size: 1.15rem;
 }
 
 .blue:hover {
@@ -189,7 +218,6 @@ nav .navbar .navbar-expand {
 }
 
 /* Media queries */
-
 @media (max-width: 575px) {
   .navbar-nav a::after {
     left: calc(50% - 40px);
@@ -206,23 +234,41 @@ nav .navbar .navbar-expand {
 
 /* Small screen */
 @media (min-width: 0) {
-  #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
+  section, .carousel-item {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  section {
+    text-align: left;
+    text-justify: none;
+  }
+
+}
+
+/* Medium screen */
+@media (min-width: 768px) {
+  section, .carousel-item {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  section {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  #ai {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 
-/* Medium screen */
-@media (min-width: 768px) {
-  #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-}
-
 /* Large screen */
 @media (min-width: 992px) {
-  #intro, #hobbies, #education, #projects-heading, #projects, #experience, #contact, #footer {
+  section, .carousel-item {
     padding-left: 20%;
     padding-right: 20%;
   }

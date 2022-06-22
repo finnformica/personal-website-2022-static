@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Finn Formica</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+  <!-- Favicon -->
+  <link rel="icon" href="static/favicon.ico">
+
+  <!-- Custom CSS stylesheet-->
+  <link id="theme" rel="stylesheet" href="static/css/dark-theme.css">
+
+<!-- chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- mathjax for latex -->
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- Configure mathjax -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script type="text/javascript">
+  const period = "{{ period }}";
+  const candles = "{{ candles }}";
+  const close = "{{ close }}";
+  const date = "{{ date }}";
+  const vol = "{{ vol }}";
+</script>
+
+</head>
+
+<body>
+  <div class="flex-wrapper background">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top solid-line  navbar-dark" id="navbar">
+
+      <!-- Theme toggle -->
+      <div class="switch-border">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <a class="navbar-brand" href="index.html#welcome">finn formica</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link dark-mode" href="index.html#welcome">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dark-mode" href="index.html#projects">projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dark-mode" href="index.html#learning">learning</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link dark-mode" href="index.html#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<section class="dark-mode project-section" id="bitcoin">
+  <div class="header">
+
+    <h1 class="big-heading dark-mode text-center">Data Science: Bitcoin Risk Metric</h1>
+
+    <p>
+      My interest in data science was kickstarted by my desire to analyse cryptocurrency timeseries data.
+      For example, I was curious to see what day was the best time to buy Bitcoin (spoiler: Monday!) or the effect of diminishing returns and lower volatility as the asset class matures.
+    </p>
+
+    <!-- <ul>
+      <li class="angle-bracket">The aim of this project was to build a tool to help me invest in Bitcoin.</li>
+      <li class="angle-bracket">To implement this, the Yahoo Finance API was utilised and the BTC OHLC data was stored in a pandas dataframe.</li>
+      <li class="angle-bracket">The chart produced showed some interesting results; a reduction in the spikes in volatility as the asset matures and periods of low volatility generally infer a good time to buy.</li>
+      <li class="angle-bracket">Unfortunately, this tool is a lagging indicator due to how the volatility is calculated, and should only be used to confirm beliefs about price movement.</li>
+    </ul> -->
+
+    <ul>
+      <li class="angle-bracket">Yahoo Finance API: up-to-date BTC timeseries data.</li>
+      <li class="angle-bracket">pandas: stores data in dataframe for cleaning.</li>
+      <li class="angle-bracket">Volatility calculation: $\sigma \cdot \sqrt{period}$</li>
+      <li class="angle-bracket">Graph shows a general decrease in volatility spike magnitude.</li>
+      <li class="angle-bracket">Volatility is a lagging metric so cannot be used to predict price action.</li>
+    </ul>
+
+  </div>
+
+
+</section>
+
+<!-- Footer -->
+<footer class="dark-mode" id="footer">
+  <div class="container-fluid">
+    <a href="mailto:finnformica@gmail.com" target="_blank" rel="noopener noreferrer"><i class="footer-icon fas fa-envelope dark-mode"></i></a>
+    <a href="https://www.linkedin.com/in/finn-formica-29093a1ab" target="_blank" rel="noopener noreferrer"><i class="footer-icon fab fa-linkedin dark-mode"></i></a>
+    <a href="https://github.com/finnformica" target="_blank" rel="noopener noreferrer"><i class="footer-icon fab fa-github dark-mode"></i></a>
+
+    <p class="pb-0">© 2022 - Web app designed and coded by Finn Formica using Bootstrap + Flask.</p>
+  </div>
+</footer>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="static/js/theme.js" charset="utf-8"></script>
+
+<script src="static/js/bitcoinChart.js" charset="utf-8"></script>
+
+</body>
+
+</html>
