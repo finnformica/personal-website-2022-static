@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Finn Formica</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+  <!-- Favicon -->
+  <link rel="icon" href="static/favicon.ico">
+
+  <!-- Custom CSS stylesheet-->
+  <link id="theme" rel="stylesheet" href="static/css/dark-theme.css">
+
+</head>
+
+<body>
+  <div class="flex-wrapper background">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top solid-line  navbar-dark" id="navbar">
+
+      <!-- Theme toggle -->
+      <div class="switch-border">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <a class="navbar-brand" href="index.html#welcome">finn formica</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link dark-mode" href="index.html#welcome">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dark-mode" href="index.html#projects">projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dark-mode" href="index.html#learning">learning</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link dark-mode" href="index.html#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<section class="project-section dark-mode">
+
+  <h1 class="big-heading dark-mode text-center">Web Development: My Journey</h1>
+
+  <p>
+    After watching a <a href="https://youtu.be/AX4wGDJYXTs" target="_blank"><span class="blue">podcast</span></a> on how Oliver Cookson founded Myprotein through a simple static website I was inspired to learn more about web development.
+    He spoke about how powerful and flexible of a tool a website is and in this age of digitalisation I wholeheartedly agree.
+    Below are some takeaways from the web development projects I have embarked on.
+  </p>
+
+  <a href="https://finnformica.github.io/my-first-site/" target="_blank"><span class="blue"><h4>My first website project</h4></span></a>
+
+  <ul class="pb-2">
+    <li class="angle-bracket">Visually unappealing.</li>
+    <li class="angle-bracket">Instrumental in teaching me how to develop a website.</li>
+    <li class="angle-bracket">Difficulty with using JavaScript.</li>
+    <li class="angle-bracket">Unable to make this simple <a href="#score"><span class="blue">snake game</span></a> work.</li>
+  </ul>
+
+  <a href="https://finnformica.github.io/Simple-Shop/index.html" target="_blank"><span class="blue"><h4>My second website project</h4></span></a>
+
+  <ul class="pb-2">
+    <li class="angle-bracket">A simple shop with a cart to add items to.</li>
+    <li class="angle-bracket">Utilised local storage to retain cart items.</li>
+    <li class="angle-bracket">More Javascript was required which helped me become accustomed to JS.</li>
+  </ul>
+
+  <h4>My latest website project (current)</h4>
+
+  <ul>
+    <li class="angle-bracket">Uses Flask to serve the website.</li>
+    <li class="angle-bracket">Progress made from the first website.</li>
+    <li class="angle-bracket">Front-end skills require practice.</li>
+    <li class="angle-bracket">Difficulty passing variables from Flask to JavaScript and back again.</li>
+    <!-- <li class="angle-bracket"></li> -->
+  </ul>
+
+  <h2 class="small-heading dark-mode text-center pb-0 pt-4" id="score">Score: 0</h2>
+
+
+<div max-width="400" max-height="400" class="mb-4 text-center">
+  <canvas class="rounded box-shadow" id="gameCanvas" width="400" height="400"><canvas>
+</div>
+
+<div class="text-center pb-4">
+
+  <button class="btn btn-lg btn-outline-light dark-mode-btn rounded px-3 py-1 mr-2" id="gameBegin" type="button" name="button"><i class="fa fa-play-circle" aria-hidden="true"></i>
+      Play
+  </button>
+
+  <button class="btn btn-lg btn-outline-info rounded px-3 py-1 ml-2" id="gameInfo" type="button" name="button" data-toggle="tooltip" data-placement="right" title="Click Play to begin, use WASD or arrow keys to move."><i class="fa fa-info-circle" aria-hidden="true"></i>
+      Info
+  </button>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer class="dark-mode" id="footer">
+  <div class="container-fluid">
+    <a href="mailto:finnformica@gmail.com" target="_blank" rel="noopener noreferrer"><i class="footer-icon fas fa-envelope dark-mode"></i></a>
+    <a href="https://www.linkedin.com/in/finn-formica-29093a1ab" target="_blank" rel="noopener noreferrer"><i class="footer-icon fab fa-linkedin dark-mode"></i></a>
+    <a href="https://github.com/finnformica" target="_blank" rel="noopener noreferrer"><i class="footer-icon fab fa-github dark-mode"></i></a>
+
+    <p class="pb-0">© 2022 - Web app designed and coded by Finn Formica using Bootstrap + Flask.</p>
+  </div>
+</footer>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="static/js/theme.js" charset="utf-8"></script>
+
+<script src="static/js/snakeGame.js" charset="utf-8"></script>
+
+<!-- initialise tooltip -->
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</body>
+
+</html>
